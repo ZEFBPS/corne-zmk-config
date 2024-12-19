@@ -4,10 +4,11 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     conditional_layers {
@@ -16,6 +17,18 @@
         adjust {
             if-layers = <1 2>;
             then-layer = <3>;
+        };
+    };
+
+    behaviors {
+        hold_tap: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced";
         };
     };
 
@@ -30,10 +43,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E  &kp R      &kp T             &kp Y            &kp U      &kp I      &kp O    &kp P          &kp BSPC
-&kp LEFT_ALT      &kp A  &kp S  &kp D  &kp F      &kp G             &kp H            &kp J      &kp K      &kp L    &kp ENTER      &kp SQT
-&kp SINGLE_QUOTE  &kp Z  &kp X  &kp C  &kp V      &kp B             &kp N            &kp M      &kp COMMA  &kp DOT  &kp RIGHT_WIN  &kp DOUBLE_QUOTES
-                                &mo 2  &kp LCTRL  &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &kp SPACE  &mo 1
+&kp TAB           &kp Q  &kp W  &kp E  &kp R      &kp T             &kp Y            &kp U                      &kp I      &kp O    &kp P          &kp BSPC
+&kp LEFT_ALT      &kp A  &kp S  &kp D  &kp F      &kp G             &kp H            &kp J                      &kp K      &kp L    &kp ENTER      &kp SQT
+&kp SINGLE_QUOTE  &kp Z  &kp X  &kp C  &kp V      &kp B             &kp N            &kp M                      &kp COMMA  &kp DOT  &kp RIGHT_WIN  &kp DOUBLE_QUOTES
+                                &mo 2  &kp LCTRL  &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &hold_tap RIGHT_ALT SPACE  &mo 1
             >;
         };
 
