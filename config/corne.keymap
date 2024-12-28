@@ -73,9 +73,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &kp K_FORWARD  &trans  &kp K_BACK  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &trans  &bt BT_CLR_ALL  &trans  &trans
-&trans  &trans  &mkp MB1       &trans  &mkp MB2    &trans    &trans        &trans        &trans  &trans          &trans  &trans
-&trans  &trans  &trans         &trans  &trans      &trans    &trans        &trans        &trans  &trans          &trans  &trans
+&trans  &trans  &kp K_FORWARD  &trans  &kp K_BACK  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &bt BT_CLR_ALL  &trans  &trans
+&trans  &trans  &mkp MB1       &trans  &mkp MB2    &trans    &trans        &trans        &trans      &trans          &trans  &trans
+&trans  &trans  &trans         &trans  &trans      &trans    &trans        &trans        &trans      &trans          &trans  &trans
                                &trans  &trans      &trans    &trans        &trans        &trans
             >;
         };
