@@ -60,7 +60,7 @@
             bindings = <
 &trans        &kp F2  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_VOLUME_UP      &kp MINUS  &kp LEFT_BRACKET      &kp SLASH       &kp RIGHT_BRACKET      &kp EQUAL        &kp DELETE
 &kp LEFT_ALT  &kp F4  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp C_VOLUME_DOWN    &kp F4     &kp LEFT_PARENTHESIS  &kp UP          &kp RIGHT_PARENTHESIS  &kp PRINTSCREEN  &bt BT_NXT
-&kp CAPS      &kp N0  &kp N7        &kp N8        &kp N9        &kp LEFT_GUI         &mkp MB2   &kp LEFT_ARROW        &kp DOWN_ARROW  &kp RIGHT              &trans           &bt BT_CLR_ALL
+&kp CAPS      &kp N0  &kp N7        &kp N8        &kp N9        &kp LEFT_GUI         &mkp MB2   &kp LEFT_ARROW        &kp DOWN_ARROW  &kp RIGHT              &kp COMMA        &bt BT_CLR_ALL
                                     &trans        &trans        &trans               &trans     &trans                &trans
             >;
         };
